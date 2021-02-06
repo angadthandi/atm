@@ -12,8 +12,13 @@ class Bank {
 
     public function __construct(String $bankName) {
         static::$numOfBanks++;
+
         $this->bankID = static::$numOfBanks;
         $this->bankName = $bankName;
+    }
+
+    public function GetAccounts() {
+        return $this->accounts;
     }
 
     public function GetBankID() {

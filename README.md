@@ -19,20 +19,22 @@
 
 ### Bank
 - BankID INT
+- BankName STRING
 
 ### Account
-- AccountType AccountType
+- BankID INT
 - AccountNumber INT
+- AccountType AccountType
+- CardNumber INT
+- Pin INT
 - Balance FLOAT
 
 ### Card
 - CardNumber INT
 - Pin INT
 
-**NOTE - From CardNumber determine BankID && AccountNumber**
-
 ### Transaction
-- AccountType AccountType
+- Account Account
 - CardNumber INT
 - Pin INT
 - Amount FLOAT
