@@ -23,6 +23,7 @@
 ### Account
 - AccountType AccountType
 - AccountNumber INT
+- Balance FLOAT
 
 ### Card
 - CardNumber INT
@@ -34,7 +35,7 @@
 - AccountType AccountType
 - CardNumber INT
 - Pin INT
-- Amount DOUBLE
+- Amount FLOAT
 - Timestamp DATETIME
 
 ### AccountType
@@ -44,3 +45,21 @@
 
 From src/public folder start php local server -
 ./../php/php.exe -S localhost:8080 -c ../php/php.ini
+
+--------------------------------------
+
+### Test ATM Flow:
+#### Setup
+- Create Account
+- Create Card for Account
+- Create Bank
+- Add Account to Bank
+- Create Bank Network
+- Add Bank to Bank Network
+#### Process Transaction
+- Initialize ATM with Bank Network
+- Verify Card with Bank
+- Verify Card Pin
+- Detect Account to Process
+- Withdraw Amount from Account
+- Return Transaction Details
